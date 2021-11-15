@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<uml:Model xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xmi:id="_bTKP4DTDEeyD6vdDh9la3A" name="ShopFloor">
+  <packageImport xmi:type="uml:PackageImport" xmi:id="_bTkfkDTDEeyD6vdDh9la3A">
+    <importedPackage xmi:type="uml:Model" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#_0"/>
+  </packageImport>
+  <packagedElement xmi:type="uml:Package" xmi:id="_35Ts0DZ3EeyD6vdDh9la3A" name="Faulty machinery">
+    <ownedRule xmi:type="uml:Constraint" xmi:id="_Cj9RoDZ4EeyD6vdDh9la3A" name="if spare line is available">
+      <specification xmi:type="uml:OpaqueExpression" xmi:id="_Cj94sDZ4EeyD6vdDh9la3A" name="constraintSpec">
+        <language>OCL</language>
+        <body>true</body>
+      </specification>
+    </ownedRule>
+    <ownedRule xmi:type="uml:Constraint" xmi:id="_ME-U4DZ4EeyD6vdDh9la3A" name="if spare line is available">
+      <specification xmi:type="uml:OpaqueExpression" xmi:id="_ME-U4TZ4EeyD6vdDh9la3A" name="constraintSpec">
+        <language>OCL</language>
+        <body>false</body>
+      </specification>
+    </ownedRule>
+    <packagedElement xmi:type="uml:UseCase" xmi:id="_5ks3oDZ3EeyD6vdDh9la3A" name="detect faulty machinery"/>
+    <packagedElement xmi:type="uml:UseCase" xmi:id="_8KdY8DZ3EeyD6vdDh9la3A" name="stop line"/>
+    <packagedElement xmi:type="uml:UseCase" xmi:id="_Id_AEDZ4EeyD6vdDh9la3A" name="use spare line"/>
+    <packagedElement xmi:type="uml:UseCase" xmi:id="_csaoQDZ4EeyD6vdDh9la3A" name="redirect products"/>
+    <packagedElement xmi:type="uml:Actor" xmi:id="_3av8oD_7EeymbaVPKjJwpQ" name="faulty machinery inspecting robot"/>
+    <packagedElement xmi:type="uml:Dependency" xmi:id="_8wui0D_7EeymbaVPKjJwpQ" client="_3av8oD_7EeymbaVPKjJwpQ" supplier="_5ks3oDZ3EeyD6vdDh9la3A"/>
+    <packagedElement xmi:type="uml:Dependency" xmi:id="_-nvu0D_7EeymbaVPKjJwpQ" client="_5ks3oDZ3EeyD6vdDh9la3A" supplier="_8KdY8DZ3EeyD6vdDh9la3A"/>
+    <packagedElement xmi:type="uml:Dependency" xmi:id="_BrksMD_8EeymbaVPKjJwpQ" client="_8KdY8DZ3EeyD6vdDh9la3A" supplier="_ME-U4DZ4EeyD6vdDh9la3A"/>
+    <packagedElement xmi:type="uml:Dependency" xmi:id="_CwklYD_8EeymbaVPKjJwpQ" client="_8KdY8DZ3EeyD6vdDh9la3A" supplier="_Cj9RoDZ4EeyD6vdDh9la3A"/>
+    <packagedElement xmi:type="uml:Dependency" xmi:id="_DqRNgD_8EeymbaVPKjJwpQ" client="_Cj9RoDZ4EeyD6vdDh9la3A" supplier="_Id_AEDZ4EeyD6vdDh9la3A"/>
+    <packagedElement xmi:type="uml:Dependency" xmi:id="_EnayQD_8EeymbaVPKjJwpQ" client="_ME-U4DZ4EeyD6vdDh9la3A" supplier="_csaoQDZ4EeyD6vdDh9la3A"/>
+    <packagedElement xmi:type="uml:Dependency" xmi:id="_UaPx0D_8EeymbaVPKjJwpQ" name="inform" client="_csaoQDZ4EeyD6vdDh9la3A" supplier="_IvMf8D_8EeymbaVPKjJwpQ"/>
+    <packagedElement xmi:type="uml:Dependency" xmi:id="_hUc-cD_8EeymbaVPKjJwpQ" name="call" client="_8KdY8DZ3EeyD6vdDh9la3A" supplier="_ZRDvwD_8EeymbaVPKjJwpQ"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Package" xmi:id="_u2J00DZ4EeyD6vdDh9la3A" name="Status update">
+    <packagedElement xmi:type="uml:UseCase" xmi:id="_wvLzADZ4EeyD6vdDh9la3A" name="machinery throughput">
+      <include xmi:type="uml:Include" xmi:id="_-vMlMD_8EeymbaVPKjJwpQ" addition="_4ALUYDZ4EeyD6vdDh9la3A"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:UseCase" xmi:id="_zoAaQDZ4EeyD6vdDh9la3A" name="order size">
+      <include xmi:type="uml:Include" xmi:id="_MImPQD_9EeymbaVPKjJwpQ" addition="_4ALUYDZ4EeyD6vdDh9la3A"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:UseCase" xmi:id="_4ALUYDZ4EeyD6vdDh9la3A" name="calculate estimate time"/>
+    <packagedElement xmi:type="uml:UseCase" xmi:id="__fsZ8DZ4EeyD6vdDh9la3A" name="machinery fault rate">
+      <include xmi:type="uml:Include" xmi:id="_8HEsYD_8EeymbaVPKjJwpQ" addition="_4ALUYDZ4EeyD6vdDh9la3A"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Dependency" xmi:id="_zK3mYD_8EeymbaVPKjJwpQ" name="send ETA" client="_4ALUYDZ4EeyD6vdDh9la3A" supplier="_q-roED_8EeymbaVPKjJwpQ"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Package" xmi:id="_PD5HoDZ5EeyD6vdDh9la3A" name="contaminated food">
+    <ownedRule xmi:type="uml:Constraint" xmi:id="_XQsJ8DZ5EeyD6vdDh9la3A" name="if product on assembly">
+      <specification xmi:type="uml:OpaqueExpression" xmi:id="_XQsxADZ5EeyD6vdDh9la3A" name="constraintSpec">
+        <language>OCL</language>
+        <body>true</body>
+      </specification>
+    </ownedRule>
+    <ownedRule xmi:type="uml:Constraint" xmi:id="_c2MZ4DZ5EeyD6vdDh9la3A" name="if spare line free">
+      <specification xmi:type="uml:OpaqueExpression" xmi:id="_c2NA8DZ5EeyD6vdDh9la3A" name="constraintSpec">
+        <language>OCL</language>
+        <body>true</body>
+      </specification>
+    </ownedRule>
+    <packagedElement xmi:type="uml:UseCase" xmi:id="_RTTlgDZ5EeyD6vdDh9la3A" name="receive information that food is contaminated"/>
+    <packagedElement xmi:type="uml:UseCase" xmi:id="_iKCSEDZ5EeyD6vdDh9la3A" name="use spare"/>
+    <packagedElement xmi:type="uml:UseCase" xmi:id="_szarkDZ5EeyD6vdDh9la3A" name="stop line"/>
+    <packagedElement xmi:type="uml:UseCase" xmi:id="_ylRVcDZ5EeyD6vdDh9la3A" name="activate cleaning"/>
+    <packagedElement xmi:type="uml:Dependency" xmi:id="_RlCp0D_9EeymbaVPKjJwpQ" name="inform" client="_ylRVcDZ5EeyD6vdDh9la3A" supplier="_QIOGgD_9EeymbaVPKjJwpQ"/>
+    <packagedElement xmi:type="uml:Dependency" xmi:id="_ef7L4D_9EeymbaVPKjJwpQ" client="_RTTlgDZ5EeyD6vdDh9la3A" supplier="_XQsJ8DZ5EeyD6vdDh9la3A"/>
+    <packagedElement xmi:type="uml:Dependency" xmi:id="_f67xUD_9EeymbaVPKjJwpQ" client="_XQsJ8DZ5EeyD6vdDh9la3A" supplier="_c2MZ4DZ5EeyD6vdDh9la3A"/>
+    <packagedElement xmi:type="uml:Dependency" xmi:id="_idIoUD_9EeymbaVPKjJwpQ" client="_c2MZ4DZ5EeyD6vdDh9la3A" supplier="_iKCSEDZ5EeyD6vdDh9la3A"/>
+    <packagedElement xmi:type="uml:Dependency" xmi:id="_ucBcMD_9EeymbaVPKjJwpQ" client="_XQsJ8DZ5EeyD6vdDh9la3A" supplier="_szarkDZ5EeyD6vdDh9la3A"/>
+    <packagedElement xmi:type="uml:Dependency" xmi:id="_wAopkD_9EeymbaVPKjJwpQ" client="_szarkDZ5EeyD6vdDh9la3A" supplier="_ylRVcDZ5EeyD6vdDh9la3A"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Actor" xmi:id="_IvMf8D_8EeymbaVPKjJwpQ" name="MES"/>
+  <packagedElement xmi:type="uml:Actor" xmi:id="_ZRDvwD_8EeymbaVPKjJwpQ" name="fixer"/>
+  <packagedElement xmi:type="uml:Actor" xmi:id="_q-roED_8EeymbaVPKjJwpQ" name="MES"/>
+  <packagedElement xmi:type="uml:Actor" xmi:id="_QIOGgD_9EeymbaVPKjJwpQ" name="MES"/>
+  <packagedElement xmi:type="uml:Actor" xmi:id="_WeV7ED_9EeymbaVPKjJwpQ" name="warehouse"/>
+  <packagedElement xmi:type="uml:Dependency" xmi:id="_aBqQ0D_9EeymbaVPKjJwpQ" client="_WeV7ED_9EeymbaVPKjJwpQ" supplier="_RTTlgDZ5EeyD6vdDh9la3A"/>
+</uml:Model>

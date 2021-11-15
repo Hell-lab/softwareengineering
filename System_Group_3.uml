@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<uml:Model xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xmi:id="_93tegDTCEeyD6vdDh9la3A" name="System_Group_3">
+  <packageImport xmi:type="uml:PackageImport" xmi:id="_98a_YDTCEeyD6vdDh9la3A">
+    <importedPackage xmi:type="uml:Model" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#_0"/>
+  </packageImport>
+  <packagedElement xmi:type="uml:Association" xmi:id="_UeJGkDTIEeyD6vdDh9la3A" name="informs"/>
+  <packagedElement xmi:type="uml:Association" xmi:id="_iXajgDTIEeyD6vdDh9la3A" name="request information"/>
+  <packagedElement xmi:type="uml:Association" xmi:id="_oGJA4DTIEeyD6vdDh9la3A" name="informs"/>
+  <packagedElement xmi:type="uml:Association" xmi:id="_f76DADTLEeyD6vdDh9la3A" name="receives information"/>
+  <packagedElement xmi:type="uml:Association" xmi:id="_kkfXsDTLEeyD6vdDh9la3A" name="informs"/>
+  <packagedElement xmi:type="uml:Package" xmi:id="_uSvwQDTMEeyD6vdDh9la3A" name="Contamination_Handling">
+    <packagedElement xmi:type="uml:Package" xmi:id="_BOdW4DTOEeyD6vdDh9la3A" name="WebShop">
+      <packagedElement xmi:type="uml:UseCase" xmi:id="_J1qAwDTPEeyD6vdDh9la3A" name="warn"/>
+      <packagedElement xmi:type="uml:Dependency" xmi:id="_dHxYED_7EeymbaVPKjJwpQ" name="warn" client="_J1qAwDTPEeyD6vdDh9la3A" supplier="_M5faoDTOEeyD6vdDh9la3A"/>
+      <packagedElement xmi:type="uml:Constraint" xmi:id="_cXN3cDTPEeyD6vdDh9la3A" name="if product was shipped">
+        <specification xmi:type="uml:OpaqueExpression" xmi:id="_cXPFkDTPEeyD6vdDh9la3A" name="constraintSpec">
+          <language>OCL</language>
+          <body>true</body>
+        </specification>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Dependency" xmi:id="_fv538D_7EeymbaVPKjJwpQ" client="_cXN3cDTPEeyD6vdDh9la3A" supplier="_J1qAwDTPEeyD6vdDh9la3A"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Package" xmi:id="__3I-oDTNEeyD6vdDh9la3A" name="Warehouse">
+      <packagedElement xmi:type="uml:UseCase" xmi:id="_f7qLYDTLEeyD6vdDh9la3A" name="undetected contaminated product"/>
+      <packagedElement xmi:type="uml:UseCase" xmi:id="_N1xx0DTQEeyD6vdDh9la3A" name="destroy product"/>
+      <packagedElement xmi:type="uml:Dependency" xmi:id="_hwKfgD_7EeymbaVPKjJwpQ" name="instruct" client="_f7qLYDTLEeyD6vdDh9la3A" supplier="_cXN3cDTPEeyD6vdDh9la3A"/>
+      <packagedElement xmi:type="uml:Dependency" xmi:id="_ohgQcD_7EeymbaVPKjJwpQ" client="_f7qLYDTLEeyD6vdDh9la3A" supplier="_TmLDIDTQEeyD6vdDh9la3A"/>
+      <packagedElement xmi:type="uml:Dependency" xmi:id="_qxPecD_7EeymbaVPKjJwpQ" client="_f7qLYDTLEeyD6vdDh9la3A" supplier="_N1xx0DTQEeyD6vdDh9la3A"/>
+      <packagedElement xmi:type="uml:Dependency" xmi:id="_t4CQQD_7EeymbaVPKjJwpQ" client="_TmLDIDTQEeyD6vdDh9la3A" supplier="_N1xx0DTQEeyD6vdDh9la3A"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Package" xmi:id="_J9i8ADTQEeyD6vdDh9la3A" name="ShopFloor">
+      <packagedElement xmi:type="uml:UseCase" xmi:id="_QGzZQDTQEeyD6vdDh9la3A" name="clean assembly line"/>
+      <packagedElement xmi:type="uml:Constraint" xmi:id="_TmLDIDTQEeyD6vdDh9la3A" name="if product is on assembly line">
+        <specification xmi:type="uml:OpaqueExpression" xmi:id="_TmLqMDTQEeyD6vdDh9la3A" name="constraintSpec">
+          <language>OCL</language>
+          <body>true</body>
+        </specification>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Dependency" xmi:id="_xrIHYD_7EeymbaVPKjJwpQ" client="_TmLDIDTQEeyD6vdDh9la3A" supplier="_QGzZQDTQEeyD6vdDh9la3A"/>
+    </packagedElement>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Actor" xmi:id="_M5faoDTOEeyD6vdDh9la3A" name="Customer"/>
+  <packagedElement xmi:type="uml:Association" xmi:id="_juVEYDTOEeyD6vdDh9la3A"/>
+  <packagedElement xmi:type="uml:Actor" xmi:id="_ttkUsDTOEeyD6vdDh9la3A" name="Supplier"/>
+  <packagedElement xmi:type="uml:Package" xmi:id="_UmnXADTREeyD6vdDh9la3A" name="Destroy_products">
+    <packagedElement xmi:type="uml:Package" xmi:id="_d6YocDTREeyD6vdDh9la3A" name="MES">
+      <packagedElement xmi:type="uml:UseCase" xmi:id="_Ut080DTSEeyD6vdDh9la3A" name="reschedule production"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Package" xmi:id="_f4pE4DTREeyD6vdDh9la3A" name="ShopFloor">
+      <packagedElement xmi:type="uml:UseCase" xmi:id="_33VdMDTSEeyD6vdDh9la3A" name="detect faulty sandwich"/>
+      <packagedElement xmi:type="uml:Actor" xmi:id="_Dc94sD_5EeymbaVPKjJwpQ" name="faulty sandwich inspecting robot"/>
+      <packagedElement xmi:type="uml:Dependency" xmi:id="_Q19BID_7EeymbaVPKjJwpQ" name="inform" client="_33VdMDTSEeyD6vdDh9la3A" supplier="_Ut080DTSEeyD6vdDh9la3A"/>
+      <packagedElement xmi:type="uml:Dependency" xmi:id="_T0bkcD_7EeymbaVPKjJwpQ" name="inform" client="_33VdMDTSEeyD6vdDh9la3A" supplier="_cTwzcDTSEeyD6vdDh9la3A"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Package" xmi:id="_05LC8DTSEeyD6vdDh9la3A" name="Warehouse">
+      <packagedElement xmi:type="uml:UseCase" xmi:id="_cTwzcDTSEeyD6vdDh9la3A" name="destroy product"/>
+    </packagedElement>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Package" xmi:id="_L20qcDTTEeyD6vdDh9la3A" name="Production">
+    <packagedElement xmi:type="uml:Package" xmi:id="_R0gw4DTTEeyD6vdDh9la3A" name="WebShop">
+      <packagedElement xmi:type="uml:UseCase" xmi:id="_caQAgDTTEeyD6vdDh9la3A" name="take order"/>
+      <packagedElement xmi:type="uml:UseCase" xmi:id="_lhW5gDTUEeyD6vdDh9la3A" name="display status"/>
+      <packagedElement xmi:type="uml:Usage" xmi:id="_qs1f4DTUEeyD6vdDh9la3A" client="_lhW5gDTUEeyD6vdDh9la3A" supplier="_a4_CEDTTEeyD6vdDh9la3A"/>
+      <packagedElement xmi:type="uml:Dependency" xmi:id="_2wuksD_6EeymbaVPKjJwpQ" client="_caQAgDTTEeyD6vdDh9la3A" supplier="_vLNlIDTTEeyD6vdDh9la3A"/>
+      <packagedElement xmi:type="uml:Dependency" xmi:id="_6mLzUD_6EeymbaVPKjJwpQ" name="delivery details" client="_caQAgDTTEeyD6vdDh9la3A" supplier="_BgdeIDTUEeyD6vdDh9la3A"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Package" xmi:id="_TTaX0DTTEeyD6vdDh9la3A" name="Warehouse">
+      <packagedElement xmi:type="uml:UseCase" xmi:id="_66eBkDTTEeyD6vdDh9la3A" name="provide ingredients"/>
+      <packagedElement xmi:type="uml:Dependency" xmi:id="__ZNdwDTTEeyD6vdDh9la3A" client="_66eBkDTTEeyD6vdDh9la3A" supplier="_13TCoDTTEeyD6vdDh9la3A"/>
+      <packagedElement xmi:type="uml:UseCase" xmi:id="_BgdeIDTUEeyD6vdDh9la3A" name="deliver product"/>
+      <packagedElement xmi:type="uml:Usage" xmi:id="_F_3osDTUEeyD6vdDh9la3A" client="_BgdeIDTUEeyD6vdDh9la3A" supplier="_a4_CEDTTEeyD6vdDh9la3A"/>
+      <packagedElement xmi:type="uml:UseCase" xmi:id="_LL96IDTUEeyD6vdDh9la3A" name="provide packages"/>
+      <packagedElement xmi:type="uml:Dependency" xmi:id="_xPjbID_6EeymbaVPKjJwpQ" client="_LL96IDTUEeyD6vdDh9la3A" supplier="_SsSQ8DTUEeyD6vdDh9la3A"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Package" xmi:id="_Vew1EDTTEeyD6vdDh9la3A" name="MES">
+      <packagedElement xmi:type="uml:UseCase" xmi:id="_pTZdMDTTEeyD6vdDh9la3A" name="find production schedule"/>
+      <packagedElement xmi:type="uml:UseCase" xmi:id="_vLNlIDTTEeyD6vdDh9la3A" name="find production steps"/>
+      <packagedElement xmi:type="uml:Dependency" xmi:id="_0eCwsDTTEeyD6vdDh9la3A" client="_vLNlIDTTEeyD6vdDh9la3A" supplier="_pTZdMDTTEeyD6vdDh9la3A"/>
+      <packagedElement xmi:type="uml:UseCase" xmi:id="_hi1OcDTUEeyD6vdDh9la3A" name="provide status updates"/>
+      <packagedElement xmi:type="uml:Dependency" xmi:id="_hdPY8D_6EeymbaVPKjJwpQ" client="_hi1OcDTUEeyD6vdDh9la3A" supplier="_lhW5gDTUEeyD6vdDh9la3A"/>
+      <packagedElement xmi:type="uml:Dependency" xmi:id="__AQK4D_6EeymbaVPKjJwpQ" client="_pTZdMDTTEeyD6vdDh9la3A" supplier="_13TCoDTTEeyD6vdDh9la3A"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Package" xmi:id="_XQHd8DTTEeyD6vdDh9la3A" name="ShopFloor">
+      <packagedElement xmi:type="uml:UseCase" xmi:id="_13TCoDTTEeyD6vdDh9la3A" name="assemble sandwiches"/>
+      <packagedElement xmi:type="uml:UseCase" xmi:id="_SsSQ8DTUEeyD6vdDh9la3A" name="package order"/>
+      <packagedElement xmi:type="uml:Dependency" xmi:id="_cNp5gDTUEeyD6vdDh9la3A" client="_13TCoDTTEeyD6vdDh9la3A" supplier="_SsSQ8DTUEeyD6vdDh9la3A"/>
+      <packagedElement xmi:type="uml:Dependency" xmi:id="_trAWUD_6EeymbaVPKjJwpQ" client="_SsSQ8DTUEeyD6vdDh9la3A" supplier="_BgdeIDTUEeyD6vdDh9la3A"/>
+    </packagedElement>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Actor" xmi:id="_a4_CEDTTEeyD6vdDh9la3A" name="Customer"/>
+  <packagedElement xmi:type="uml:Usage" xmi:id="_nHzvYDTTEeyD6vdDh9la3A" client="_a4_CEDTTEeyD6vdDh9la3A" supplier="_caQAgDTTEeyD6vdDh9la3A"/>
+  <packagedElement xmi:type="uml:Package" xmi:id="_FoUO4DTVEeyD6vdDh9la3A" name="Stock Management">
+    <packagedElement xmi:type="uml:Package" xmi:id="_HxKxwDTVEeyD6vdDh9la3A" name="WebShop">
+      <packagedElement xmi:type="uml:UseCase" xmi:id="_Lg2vkDTVEeyD6vdDh9la3A" name="change prices"/>
+      <packagedElement xmi:type="uml:UseCase" xmi:id="_qrGhkD_4EeymbaVPKjJwpQ" name="change presentation of the offers "/>
+      <packagedElement xmi:type="uml:Realization" xmi:id="_zliF8D_4EeymbaVPKjJwpQ" client="_Lg2vkDTVEeyD6vdDh9la3A" supplier="_eytzwD_3EeymbaVPKjJwpQ"/>
+      <packagedElement xmi:type="uml:Realization" xmi:id="_1BUHcD_4EeymbaVPKjJwpQ" client="_qrGhkD_4EeymbaVPKjJwpQ" supplier="_eytzwD_3EeymbaVPKjJwpQ"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Package" xmi:id="_JZR_EDTVEeyD6vdDh9la3A" name="Warehouse">
+      <packagedElement xmi:type="uml:UseCase" xmi:id="_M_7VoDTVEeyD6vdDh9la3A" name="inform about low stock items"/>
+      <packagedElement xmi:type="uml:UseCase" xmi:id="_on5wMD_3EeymbaVPKjJwpQ" name="detect ingrediendts near exceeding date"/>
+      <packagedElement xmi:type="uml:Realization" xmi:id="_O1ynkD_4EeymbaVPKjJwpQ" client="_on5wMD_3EeymbaVPKjJwpQ" supplier="_Kf_E8D_4EeymbaVPKjJwpQ"/>
+      <packagedElement xmi:type="uml:Realization" xmi:id="_RWnlkD_4EeymbaVPKjJwpQ" client="_M_7VoDTVEeyD6vdDh9la3A" supplier="_Kf_E8D_4EeymbaVPKjJwpQ"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Package" xmi:id="_IkCVoD_4EeymbaVPKjJwpQ" name="MES">
+      <packagedElement xmi:type="uml:UseCase" xmi:id="_Kf_E8D_4EeymbaVPKjJwpQ" name="find sandwiches that should be sold more/less often"/>
+      <packagedElement xmi:type="uml:Realization" xmi:id="_w9WiwD_4EeymbaVPKjJwpQ" client="_Kf_E8D_4EeymbaVPKjJwpQ" supplier="_qrGhkD_4EeymbaVPKjJwpQ"/>
+      <packagedElement xmi:type="uml:Realization" xmi:id="_yMBVUD_4EeymbaVPKjJwpQ" client="_Kf_E8D_4EeymbaVPKjJwpQ" supplier="_Lg2vkDTVEeyD6vdDh9la3A"/>
+    </packagedElement>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Package" xmi:id="_S0J-EDTVEeyD6vdDh9la3A" name="Priority Handling">
+    <packagedElement xmi:type="uml:Package" xmi:id="_jw-rkDTVEeyD6vdDh9la3A" name="WebShop">
+      <packagedElement xmi:type="uml:UseCase" xmi:id="_Y2zEYD_2EeymbaVPKjJwpQ" name="take order"/>
+      <packagedElement xmi:type="uml:Realization" xmi:id="_um7I0D_2EeymbaVPKjJwpQ" client="_Y2zEYD_2EeymbaVPKjJwpQ" supplier="_o4zIYD_2EeymbaVPKjJwpQ"/>
+      <packagedElement xmi:type="uml:UseCase" xmi:id="_5bRU0D_5EeymbaVPKjJwpQ" name="change displayed ETA"/>
+      <packagedElement xmi:type="uml:Realization" xmi:id="_9PdYID_5EeymbaVPKjJwpQ" client="_5bRU0D_5EeymbaVPKjJwpQ" supplier="_UM9LcD_2EeymbaVPKjJwpQ"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Package" xmi:id="_Rl_JMD_2EeymbaVPKjJwpQ" name="MES">
+      <packagedElement xmi:type="uml:UseCase" xmi:id="_o4zIYD_2EeymbaVPKjJwpQ" name="calculate priority"/>
+      <packagedElement xmi:type="uml:UseCase" xmi:id="_DkckQD_6EeymbaVPKjJwpQ" name="calculate ETA"/>
+      <packagedElement xmi:type="uml:Realization" xmi:id="_Hx-7sD_6EeymbaVPKjJwpQ" client="_DkckQD_6EeymbaVPKjJwpQ" supplier="_5bRU0D_5EeymbaVPKjJwpQ"/>
+      <packagedElement xmi:type="uml:Realization" xmi:id="_KDtGsD_6EeymbaVPKjJwpQ" client="_o4zIYD_2EeymbaVPKjJwpQ" supplier="_DkckQD_6EeymbaVPKjJwpQ"/>
+    </packagedElement>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Actor" xmi:id="_UM9LcD_2EeymbaVPKjJwpQ" name="Customer"/>
+  <packagedElement xmi:type="uml:Realization" xmi:id="_k62sID_2EeymbaVPKjJwpQ" client="_UM9LcD_2EeymbaVPKjJwpQ" supplier="_Y2zEYD_2EeymbaVPKjJwpQ"/>
+  <packagedElement xmi:type="uml:Actor" xmi:id="_eytzwD_3EeymbaVPKjJwpQ" name="Customer"/>
+  <packagedElement xmi:type="uml:Realization" xmi:id="_FcrtsD_5EeymbaVPKjJwpQ" client="_Dc94sD_5EeymbaVPKjJwpQ" supplier="_33VdMDTSEeyD6vdDh9la3A"/>
+  <packagedElement xmi:type="uml:Dependency" xmi:id="_kD6DwD_7EeymbaVPKjJwpQ" name="inform" client="_ttkUsDTOEeyD6vdDh9la3A" supplier="_f7qLYDTLEeyD6vdDh9la3A"/>
+</uml:Model>

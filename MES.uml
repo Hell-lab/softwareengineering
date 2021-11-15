@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<uml:Model xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xmi:id="_PgG4kDTDEeyD6vdDh9la3A" name="MES">
+  <packageImport xmi:type="uml:PackageImport" xmi:id="_PgprIDTDEeyD6vdDh9la3A">
+    <importedPackage xmi:type="uml:Model" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#_0"/>
+  </packageImport>
+  <packagedElement xmi:type="uml:Package" xmi:id="_IlDngDZvEeyD6vdDh9la3A" name="Normal production">
+    <packagedElement xmi:type="uml:UseCase" xmi:id="_NPBcQDZvEeyD6vdDh9la3A" name="fetch order"/>
+    <packagedElement xmi:type="uml:UseCase" xmi:id="_RXREADZvEeyD6vdDh9la3A" name="divide into production steps"/>
+    <packagedElement xmi:type="uml:UseCase" xmi:id="_XL1DoDZvEeyD6vdDh9la3A" name="schedule steps"/>
+    <packagedElement xmi:type="uml:UseCase" xmi:id="_YZtzEDZvEeyD6vdDh9la3A" name="calculate priority"/>
+    <packagedElement xmi:type="uml:Dependency" xmi:id="_71R8UD_9EeymbaVPKjJwpQ" name="send" client="_XL1DoDZvEeyD6vdDh9la3A" supplier="_5LHcID_9EeymbaVPKjJwpQ"/>
+    <packagedElement xmi:type="uml:Dependency" xmi:id="_CZ78ID_-EeymbaVPKjJwpQ" client="_NPBcQDZvEeyD6vdDh9la3A" supplier="_YZtzEDZvEeyD6vdDh9la3A"/>
+    <packagedElement xmi:type="uml:Dependency" xmi:id="_DKrckD_-EeymbaVPKjJwpQ" client="_YZtzEDZvEeyD6vdDh9la3A" supplier="_XL1DoDZvEeyD6vdDh9la3A"/>
+    <packagedElement xmi:type="uml:Dependency" xmi:id="_EZFwcD_-EeymbaVPKjJwpQ" client="_RXREADZvEeyD6vdDh9la3A" supplier="_XL1DoDZvEeyD6vdDh9la3A"/>
+    <packagedElement xmi:type="uml:Dependency" xmi:id="_FVPPoD_-EeymbaVPKjJwpQ" client="_NPBcQDZvEeyD6vdDh9la3A" supplier="_RXREADZvEeyD6vdDh9la3A"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Package" xmi:id="_n7gF8DZvEeyD6vdDh9la3A" name="Ill-formated order">
+    <packagedElement xmi:type="uml:UseCase" xmi:id="_qq3PMDZvEeyD6vdDh9la3A" name="detect ill-formated order"/>
+    <packagedElement xmi:type="uml:UseCase" xmi:id="_x1tsUDZvEeyD6vdDh9la3A" name="ask for human intervention"/>
+    <packagedElement xmi:type="uml:UseCase" xmi:id="_ztu94DZvEeyD6vdDh9la3A" name="fetch order"/>
+    <packagedElement xmi:type="uml:UseCase" xmi:id="_sDcLsDZvEeyD6vdDh9la3A" name="display warning"/>
+    <packagedElement xmi:type="uml:Usage" xmi:id="_3kwSwDZvEeyD6vdDh9la3A" client="_ztu94DZvEeyD6vdDh9la3A" supplier="_qq3PMDZvEeyD6vdDh9la3A"/>
+    <packagedElement xmi:type="uml:UseCase" xmi:id="_Aa7CMDZwEeyD6vdDh9la3A" name="mark order as undeliverable"/>
+    <packagedElement xmi:type="uml:Dependency" xmi:id="_P9EJ8D_-EeymbaVPKjJwpQ" client="_x1tsUDZvEeyD6vdDh9la3A" supplier="_MKnzED_-EeymbaVPKjJwpQ"/>
+    <packagedElement xmi:type="uml:Dependency" xmi:id="_ZJL7QD_-EeymbaVPKjJwpQ" client="_qq3PMDZvEeyD6vdDh9la3A" supplier="_Aa7CMDZwEeyD6vdDh9la3A"/>
+    <packagedElement xmi:type="uml:Dependency" xmi:id="_aQYM0D_-EeymbaVPKjJwpQ" client="_qq3PMDZvEeyD6vdDh9la3A" supplier="_sDcLsDZvEeyD6vdDh9la3A"/>
+    <packagedElement xmi:type="uml:Dependency" xmi:id="_bEtMwD_-EeymbaVPKjJwpQ" client="_qq3PMDZvEeyD6vdDh9la3A" supplier="_x1tsUDZvEeyD6vdDh9la3A"/>
+    <packagedElement xmi:type="uml:Dependency" xmi:id="_6Mnw4EAHEeymbaVPKjJwpQ" client="_Aa7CMDZwEeyD6vdDh9la3A" supplier="_Igu7QD_-EeymbaVPKjJwpQ"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Package" xmi:id="_LHAKYDZwEeyD6vdDh9la3A" name="Product cannot deliverd in time">
+    <ownedRule xmi:type="uml:Constraint" xmi:id="_fHW6UDZwEeyD6vdDh9la3A" name="if time not acceptable">
+      <specification xmi:type="uml:OpaqueExpression" xmi:id="_fHW6UTZwEeyD6vdDh9la3A" name="constraintSpec">
+        <language>OCL</language>
+        <body>true</body>
+      </specification>
+    </ownedRule>
+    <packagedElement xmi:type="uml:UseCase" xmi:id="_Nt-zsDZwEeyD6vdDh9la3A" name="fetch current velocity">
+      <include xmi:type="uml:Include" xmi:id="_9TLBMD_-EeymbaVPKjJwpQ" addition="_WpRTsDZwEeyD6vdDh9la3A"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:UseCase" xmi:id="_PEkMIDZwEeyD6vdDh9la3A" name="fetch order">
+      <include xmi:type="uml:Include" xmi:id="_-Y7IUD_-EeymbaVPKjJwpQ" addition="_WpRTsDZwEeyD6vdDh9la3A"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:UseCase" xmi:id="_WpRTsDZwEeyD6vdDh9la3A" name="calculate estimated time of delivery"/>
+    <packagedElement xmi:type="uml:UseCase" xmi:id="_aDh0EDZwEeyD6vdDh9la3A" name="mark order as delayed"/>
+    <packagedElement xmi:type="uml:Dependency" xmi:id="_DhlEMD__EeymbaVPKjJwpQ" client="_WpRTsDZwEeyD6vdDh9la3A" supplier="_fHW6UDZwEeyD6vdDh9la3A"/>
+    <packagedElement xmi:type="uml:Dependency" xmi:id="_FHnN4D__EeymbaVPKjJwpQ" client="_fHW6UDZwEeyD6vdDh9la3A" supplier="_aDh0EDZwEeyD6vdDh9la3A"/>
+    <packagedElement xmi:type="uml:Dependency" xmi:id="_IKSUsD__EeymbaVPKjJwpQ" client="_aDh0EDZwEeyD6vdDh9la3A" supplier="_uyCTAD_-EeymbaVPKjJwpQ"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Actor" xmi:id="_5LHcID_9EeymbaVPKjJwpQ" name="shopfloor"/>
+  <packagedElement xmi:type="uml:Actor" xmi:id="_-3wO0D_9EeymbaVPKjJwpQ" name="webshop"/>
+  <packagedElement xmi:type="uml:Dependency" xmi:id="_A1H6cD_-EeymbaVPKjJwpQ" client="_-3wO0D_9EeymbaVPKjJwpQ" supplier="_NPBcQDZvEeyD6vdDh9la3A"/>
+  <packagedElement xmi:type="uml:Actor" xmi:id="_Igu7QD_-EeymbaVPKjJwpQ" name="webshop"/>
+  <packagedElement xmi:type="uml:Dependency" xmi:id="_K54j8D_-EeymbaVPKjJwpQ" client="_Igu7QD_-EeymbaVPKjJwpQ" supplier="_ztu94DZvEeyD6vdDh9la3A"/>
+  <packagedElement xmi:type="uml:Actor" xmi:id="_MKnzED_-EeymbaVPKjJwpQ" name="emercency developer"/>
+  <packagedElement xmi:type="uml:Actor" xmi:id="_uyCTAD_-EeymbaVPKjJwpQ" name="webshop"/>
+  <packagedElement xmi:type="uml:Dependency" xmi:id="_3QxZ4D_-EeymbaVPKjJwpQ" client="_uyCTAD_-EeymbaVPKjJwpQ" supplier="_PEkMIDZwEeyD6vdDh9la3A"/>
+</uml:Model>
