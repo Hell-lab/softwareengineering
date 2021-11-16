@@ -315,6 +315,13 @@
     </eAnnotations>
     <ownedEnd xmi:type="uml:Property" xmi:id="_Zw6fwUY3Eey4M5AdAQEoIQ" name="order database" type="_MtHHsEY2Eey4M5AdAQEoIQ" association="_Zw5RoEY3Eey4M5AdAQEoIQ"/>
   </packagedElement>
+  <packagedElement xmi:type="uml:Interaction" xmi:id="_7zwoIEY5Eey4M5AdAQEoIQ" name="Normal Order">
+    <lifeline xmi:type="uml:Lifeline" xmi:id="_rD7IgEcPEey4M5AdAQEoIQ" name="Customer"/>
+    <lifeline xmi:type="uml:Lifeline" xmi:id="_wdUPEEcPEey4M5AdAQEoIQ" name="Order"/>
+    <lifeline xmi:type="uml:Lifeline" xmi:id="_A60jUEcQEey4M5AdAQEoIQ" name="Order Database"/>
+    <lifeline xmi:type="uml:Lifeline" xmi:id="_G504YEcQEey4M5AdAQEoIQ" name="Payment"/>
+    <lifeline xmi:type="uml:Lifeline" xmi:id="_JYzcQEcQEey4M5AdAQEoIQ" name="Delivery"/>
+  </packagedElement>
   <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_JDBxwEVpEey4M5AdAQEoIQ">
     <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_JDGDMEVpEey4M5AdAQEoIQ" source="http://www.eclipse.org/uml2/2.0.0/UML">
       <references xmi:type="ecore:EPackage" href="pathmap://PAPYRUS_ACTIONLANGUAGE_PROFILE/ActionLanguage-Profile.profile.uml#_Kv8EIKFXEeS_KNX0nfvIVQ"/>

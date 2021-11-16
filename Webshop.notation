@@ -1624,4 +1624,45 @@
       <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_ZxxbYUY3Eey4M5AdAQEoIQ" id="(0.4968944099378882,0.0)"/>
     </edges>
   </notation:Diagram>
+  <notation:Diagram xmi:id="_9x36oEY5Eey4M5AdAQEoIQ" type="PapyrusUMLSequenceDiagram" name="WebShop_Sequence-Diagram" measurementUnit="Pixel">
+    <children xmi:type="notation:Shape" xmi:id="_9x36oUY5Eey4M5AdAQEoIQ" type="Interaction_Shape">
+      <children xmi:type="notation:DecorationNode" xmi:id="_9x36okY5Eey4M5AdAQEoIQ" type="Interaction_NameLabel"/>
+      <children xmi:type="notation:BasicCompartment" xmi:id="_9x36o0Y5Eey4M5AdAQEoIQ" type="Interaction_SubfragmentCompartment">
+        <children xmi:type="notation:Shape" xmi:id="_rD9kwEcPEey4M5AdAQEoIQ" type="Lifeline_Shape">
+          <children xmi:type="notation:DecorationNode" xmi:id="_rD-L0EcPEey4M5AdAQEoIQ" type="Lifeline_NameLabel"/>
+          <element xmi:type="uml:Lifeline" href="Webshop.uml#_rD7IgEcPEey4M5AdAQEoIQ"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_rD9kwUcPEey4M5AdAQEoIQ" x="34" y="10" width="101" height="41"/>
+        </children>
+        <children xmi:type="notation:Shape" xmi:id="_wdWrUEcPEey4M5AdAQEoIQ" type="Lifeline_Shape">
+          <children xmi:type="notation:DecorationNode" xmi:id="_wdWrUkcPEey4M5AdAQEoIQ" type="Lifeline_NameLabel"/>
+          <element xmi:type="uml:Lifeline" href="Webshop.uml#_wdUPEEcPEey4M5AdAQEoIQ"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_wdWrUUcPEey4M5AdAQEoIQ" x="214" y="10" width="101" height="21"/>
+        </children>
+        <children xmi:type="notation:Shape" xmi:id="_A62_kEcQEey4M5AdAQEoIQ" type="Lifeline_Shape">
+          <children xmi:type="notation:DecorationNode" xmi:id="_A62_kkcQEey4M5AdAQEoIQ" type="Lifeline_NameLabel"/>
+          <element xmi:type="uml:Lifeline" href="Webshop.uml#_A60jUEcQEey4M5AdAQEoIQ"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_A62_kUcQEey4M5AdAQEoIQ" x="374" y="10" width="121" height="21"/>
+        </children>
+        <children xmi:type="notation:Shape" xmi:id="_G52tkEcQEey4M5AdAQEoIQ" type="Lifeline_Shape">
+          <children xmi:type="notation:DecorationNode" xmi:id="_G537sEcQEey4M5AdAQEoIQ" type="Lifeline_NameLabel"/>
+          <element xmi:type="uml:Lifeline" href="Webshop.uml#_G504YEcQEey4M5AdAQEoIQ"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_G52tkUcQEey4M5AdAQEoIQ" x="534" y="10" width="121" height="21"/>
+        </children>
+        <children xmi:type="notation:Shape" xmi:id="_JY2fkEcQEey4M5AdAQEoIQ" type="Lifeline_Shape">
+          <children xmi:type="notation:DecorationNode" xmi:id="_JY2fkkcQEey4M5AdAQEoIQ" type="Lifeline_NameLabel"/>
+          <element xmi:type="uml:Lifeline" href="Webshop.uml#_JYzcQEcQEey4M5AdAQEoIQ"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_JY2fkUcQEey4M5AdAQEoIQ" x="694" y="10" width="121" height="21"/>
+        </children>
+        <layoutConstraint xmi:type="notation:Bounds" xmi:id="_9x36pEY5Eey4M5AdAQEoIQ"/>
+      </children>
+      <element xmi:type="uml:Interaction" href="Webshop.uml#_7zwoIEY5Eey4M5AdAQEoIQ"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_9x36pUY5Eey4M5AdAQEoIQ"/>
+    </children>
+    <styles xmi:type="notation:StringValueStyle" xmi:id="_9x36pkY5Eey4M5AdAQEoIQ" name="diagram_compatibility_version" stringValue="1.4.0"/>
+    <styles xmi:type="notation:DiagramStyle" xmi:id="_9x36p0Y5Eey4M5AdAQEoIQ"/>
+    <styles xmi:type="style:PapyrusDiagramStyle" xmi:id="_9x36qEY5Eey4M5AdAQEoIQ" diagramKindId="org.eclipse.papyrus.uml.diagram.sequence">
+      <owner xmi:type="uml:Model" href="Webshop.uml#_UQOYoDTDEeyD6vdDh9la3A"/>
+    </styles>
+    <element xmi:type="uml:Interaction" href="Webshop.uml#_7zwoIEY5Eey4M5AdAQEoIQ"/>
+  </notation:Diagram>
 </xmi:XMI>
