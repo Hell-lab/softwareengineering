@@ -226,7 +226,10 @@
     <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_XhdZwEyGEeyBQMRzQWGLyg" name="OCCUPIED"/>
     <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_YEaV0EyGEeyBQMRzQWGLyg" name="BROKEN"/>
   </packagedElement>
-  <packagedElement xmi:type="uml:Class" xmi:id="_SBacIEyHEeyBQMRzQWGLyg" name="Instruction Database"/>
+  <packagedElement xmi:type="uml:Class" xmi:id="_SBacIEyHEeyBQMRzQWGLyg" name="Instruction Database">
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_T-NWoEygEeyK5IcoQlX6AA" name="addInstruction"/>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_WFDHUEygEeyK5IcoQlX6AA" name="fetchAndRemoveNextInstruction"/>
+  </packagedElement>
   <packagedElement xmi:type="uml:Class" xmi:id="_U2AqsEyHEeyBQMRzQWGLyg" name="Instruction">
     <ownedAttribute xmi:type="uml:Property" xmi:id="_au1fQEyHEeyBQMRzQWGLyg" name="instructionID">
       <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EInt"/>
@@ -410,6 +413,53 @@
       <subvertex xmi:type="uml:FinalState" xmi:id="_oR8MAEyUEeyBQMRzQWGLyg" name="FINISHED ORDER"/>
     </region>
   </packagedElement>
+  <packagedElement xmi:type="uml:Package" xmi:id="_vuWy4EyXEeyBQMRzQWGLyg" name="WebShop">
+    <packagedElement xmi:type="uml:Artifact" xmi:id="_2zGykEyYEeyBQMRzQWGLyg" name="Order Manager" fileName=""/>
+    <packagedElement xmi:type="uml:Dependency" xmi:id="_E8o5EEyZEeyBQMRzQWGLyg" client="_vuWy4EyXEeyBQMRzQWGLyg" supplier="_NQ_KUEyYEeyBQMRzQWGLyg"/>
+    <packagedElement xmi:type="uml:Dependency" xmi:id="__1YO4EyZEeyBQMRzQWGLyg" client="_2zGykEyYEeyBQMRzQWGLyg" supplier="_jORhAEyYEeyBQMRzQWGLyg"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Package" xmi:id="_yyjjsEyXEeyBQMRzQWGLyg" name="MES">
+    <packagedElement xmi:type="uml:Artifact" xmi:id="_L-9sUEyZEeyBQMRzQWGLyg" name="Scheduler" fileName=""/>
+    <packagedElement xmi:type="uml:Artifact" xmi:id="_O26J0EyZEeyBQMRzQWGLyg" name="Order Manager" fileName=""/>
+    <packagedElement xmi:type="uml:Artifact" xmi:id="_RrLoQEyZEeyBQMRzQWGLyg" name="Instruction Manager" fileName=""/>
+    <packagedElement xmi:type="uml:Artifact" xmi:id="_VNX8oEyZEeyBQMRzQWGLyg" name="Machine Manager" fileName=""/>
+    <packagedElement xmi:type="uml:Dependency" xmi:id="_b8TSwEyZEeyBQMRzQWGLyg" client="_VNX8oEyZEeyBQMRzQWGLyg" supplier="_eJR9IEyYEeyBQMRzQWGLyg"/>
+    <packagedElement xmi:type="uml:Dependency" xmi:id="_d4_B4EyZEeyBQMRzQWGLyg" client="_RrLoQEyZEeyBQMRzQWGLyg" supplier="_pCHH4EyYEeyBQMRzQWGLyg"/>
+    <packagedElement xmi:type="uml:Dependency" xmi:id="_iZOS4EyZEeyBQMRzQWGLyg" client="_O26J0EyZEeyBQMRzQWGLyg" supplier="_L-9sUEyZEeyBQMRzQWGLyg"/>
+    <packagedElement xmi:type="uml:Dependency" xmi:id="_oxwiQEyZEeyBQMRzQWGLyg" client="_L-9sUEyZEeyBQMRzQWGLyg" supplier="_RrLoQEyZEeyBQMRzQWGLyg"/>
+    <packagedElement xmi:type="uml:Dependency" xmi:id="_scOo4EyZEeyBQMRzQWGLyg" client="_VNX8oEyZEeyBQMRzQWGLyg" supplier="_L-9sUEyZEeyBQMRzQWGLyg"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Package" xmi:id="_z3hnsEyXEeyBQMRzQWGLyg" name="ShopFloor">
+    <packagedElement xmi:type="uml:Artifact" xmi:id="_P2XmQEyaEeyBQMRzQWGLyg" name="Machine Manager" fileName=""/>
+    <packagedElement xmi:type="uml:Dependency" xmi:id="_VpJdMEyaEeyBQMRzQWGLyg" client="_P2XmQEyaEeyBQMRzQWGLyg" supplier="_eJR9IEyYEeyBQMRzQWGLyg"/>
+    <packagedElement xmi:type="uml:Artifact" xmi:id="_Xs_kQEyaEeyBQMRzQWGLyg" name="Instruction Manager" fileName=""/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Package" xmi:id="_1aCjUEyXEeyBQMRzQWGLyg" name="Warehouse">
+    <packagedElement xmi:type="uml:Artifact" xmi:id="_uRgTAEyaEeyBQMRzQWGLyg" name="Inventory Manager" fileName=""/>
+    <packagedElement xmi:type="uml:Artifact" xmi:id="_0oZjoEyaEeyBQMRzQWGLyg" name="Shipping Manager" fileName=""/>
+    <packagedElement xmi:type="uml:Dependency" xmi:id="_7BWpwEyaEeyBQMRzQWGLyg" client="_uRgTAEyaEeyBQMRzQWGLyg" supplier="_uro8MEyYEeyBQMRzQWGLyg"/>
+    <packagedElement xmi:type="uml:Dependency" xmi:id="_-I9T4EyaEeyBQMRzQWGLyg" client="_uRgTAEyaEeyBQMRzQWGLyg" supplier="_eJR9IEyYEeyBQMRzQWGLyg"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Node" xmi:id="_301KwEyXEeyBQMRzQWGLyg" name="Order Database">
+    <nestedClassifier xmi:type="uml:Artifact" xmi:id="_NQ_KUEyYEeyBQMRzQWGLyg" name="Orders Table" fileName=""/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Node" xmi:id="_b3eSkEyYEeyBQMRzQWGLyg" name="Machine Database">
+    <nestedClassifier xmi:type="uml:Artifact" xmi:id="_eJR9IEyYEeyBQMRzQWGLyg" name="Machines Table" fileName=""/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Node" xmi:id="_hZ-R0EyYEeyBQMRzQWGLyg" name="Product Database">
+    <nestedClassifier xmi:type="uml:Artifact" xmi:id="_jORhAEyYEeyBQMRzQWGLyg" name="Products Table" fileName=""/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Node" xmi:id="_mKFx4EyYEeyBQMRzQWGLyg" name="Instruction Database">
+    <nestedClassifier xmi:type="uml:Artifact" xmi:id="_pCHH4EyYEeyBQMRzQWGLyg" name="Instructions Table" fileName=""/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Node" xmi:id="_sPK5wEyYEeyBQMRzQWGLyg" name="Ingredients Database">
+    <nestedClassifier xmi:type="uml:Artifact" xmi:id="_uro8MEyYEeyBQMRzQWGLyg" name="Ingredients Table" fileName=""/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Dependency" xmi:id="_YRPWQEyZEeyBQMRzQWGLyg" client="_NQ_KUEyYEeyBQMRzQWGLyg" supplier="_O26J0EyZEeyBQMRzQWGLyg"/>
+  <packagedElement xmi:type="uml:Dependency" xmi:id="_jG9tMEyaEeyBQMRzQWGLyg" client="_jORhAEyYEeyBQMRzQWGLyg" supplier="_uro8MEyYEeyBQMRzQWGLyg"/>
+  <packagedElement xmi:type="uml:Dependency" xmi:id="_yUGlwEyaEeyBQMRzQWGLyg" client="_jORhAEyYEeyBQMRzQWGLyg" supplier="_L-9sUEyZEeyBQMRzQWGLyg"/>
+  <packagedElement xmi:type="uml:Dependency" xmi:id="_FhwtcEybEeyBQMRzQWGLyg" client="_NQ_KUEyYEeyBQMRzQWGLyg" supplier="_0oZjoEyaEeyBQMRzQWGLyg"/>
+  <packagedElement xmi:type="uml:Dependency" xmi:id="_QiX7MEybEeyBQMRzQWGLyg" client="_pCHH4EyYEeyBQMRzQWGLyg" supplier="_Xs_kQEyaEeyBQMRzQWGLyg"/>
   <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_e__IMEyDEeyBQMRzQWGLyg">
     <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_fABkcEyDEeyBQMRzQWGLyg" source="http://www.eclipse.org/uml2/2.0.0/UML">
       <references xmi:type="ecore:EPackage" href="pathmap://PAPYRUS_ACTIONLANGUAGE_PROFILE/ActionLanguage-Profile.profile.uml#_Kv8EIKFXEeS_KNX0nfvIVQ"/>
